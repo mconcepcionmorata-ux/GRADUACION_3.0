@@ -1,0 +1,102 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #fafafa;
+    color: #222;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #4b79ff, #6ad7ff);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* COUNTDOWN */
+.countdown-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+#countdown div {
+    text-align: center;
+}
+
+#countdown span {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* TARJETAS */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* PROGRESIÓN DE TONO */
+.formal .card {
+    border-left: 6px solid #003366;
+}
+
+.neutro {
+    border-left: 6px solid #888;
+}
+
+.fiesta {
+    border-left: 6px solid #ff2e63;
+    background: #fff0f5;
+}
+
+/* LISTAS */
+.lista li {
+    margin: 10px 0;
+}
+
+/* GALERÍA */
+.upload {
+    display: block;
+    margin: 20px auto;
+}
+
+.nota {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* FOOTER */
+.footer {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}

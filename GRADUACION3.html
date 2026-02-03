@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduación Marketing y Publicidad · MEDAC-Davante 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HERO + CUENTA ATRÁS -->
+    <header class="hero">
+        <h1>Graduación Marketing y Publicidad · MEDAC–Davante 2026</h1>
+        <p class="subtitulo">Una celebración para recordar lo vivido, lo aprendido… y lo que está por venir.</p>
+
+        <div class="countdown-container">
+            <h2>Cuenta atrás para el gran día</h2>
+            <div id="countdown">
+                <div><span id="days"></span><p>Días</p></div>
+                <div><span id="hours"></span><p>Horas</p></div>
+                <div><span id="minutes"></span><p>Minutos</p></div>
+                <div><span id="seconds"></span><p>Segundos</p></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DATOS DEL EVENTO -->
+    <section id="evento" class="section formal">
+        <h2>Datos clave del evento</h2>
+        <p class="intro">Todo lo que necesitas saber para no perderte nada.</p>
+
+        <div class="card">
+            <h3>Ceremonia oficial</h3>
+            <p><strong>Fecha:</strong> 9 de junio de 2026 · 18:30 h</p>
+            <p><strong>Lugar:</strong> Palacio de Congresos de Zaragoza</p>
+            <p>La dirección del centro presidirá el acto oficial de graduación, un momento solemne para reconocer el esfuerzo, la constancia y el crecimiento académico del alumnado.</p>
+        </div>
+
+        <div class="card neutro">
+            <h3>Cena de gala</h3>
+            <p><strong>Lugar:</strong> Restaurante AURA</p>
+            <p>Tras la ceremonia, disfrutaremos de una cena elegante en un entorno privilegiado. El menú incluye opción vegana para quien lo prefiera.</p>
+        </div>
+
+        <div class="card fiesta">
+            <h3>Fiesta en SUPERNOVA</h3>
+            <p><strong>Lugar:</strong> Discoteca SUPERNOVA</p>
+            <p>Cuando el protocolo termine… empieza lo bueno. Música, sorpresas y una noche para desatar toda la energía acumulada. Prepárate para una fiesta épica.</p>
+        </div>
+    </section>
+
+    <!-- POR QUÉ NO TE LO PUEDES PERDER -->
+    <section id="motivos" class="section">
+        <h2>Por qué no te lo puedes perder</h2>
+        <ul class="lista">
+            <li><strong>Cierre de etapa:</strong> Un momento único para celebrar tu esfuerzo.</li>
+            <li><strong>Recuerdos para siempre:</strong> Fotos, vídeos y anécdotas que quedarán para siempre.</li>
+            <li><strong>Networking real:</strong> Compañeros, profes y contactos reunidos.</li>
+            <li><strong>Un evento a tu medida:</strong> Ceremonia, cena y fiesta en un mismo día.</li>
+            <li><strong>Porque te lo has ganado:</strong> Y eso ya es motivo suficiente.</li>
+        </ul>
+    </section>
+
+    <!-- CÓMO PARTICIPAR -->
+    <section id="participacion" class="section">
+        <h2>Cómo se espera que participes</h2>
+
+        <h3>En la ceremonia</h3>
+        <ul>
+            <li>Llega con antelación.</li>
+            <li>Mantén una actitud respetuosa.</li>
+            <li>Disfruta del momento.</li>
+        </ul>
+
+        <h3>En la cena de gala</h3>
+        <ul>
+            <li>Confirma asistencia y menú.</li>
+            <li>Viste acorde al ambiente.</li>
+            <li>Comparte conversación y buen ambiente.</li>
+        </ul>
+
+        <h3>En la fiesta en SUPERNOVA</h3>
+        <ul>
+            <li>Ven con ganas de pasarlo bien.</li>
+            <li>Respeta al resto de asistentes.</li>
+            <li>Participa en las sorpresas.</li>
+        </ul>
+    </section>
+
+    <!-- ORGANIZADORES -->
+    <section id="organizacion" class="section">
+        <h2>Quién está detrás de la organización</h2>
+
+        <div class="card">
+            <h3>Laura Cavero – Delegada del curso</h3>
+            <p>Coordina, media y hace que todo encaje.</p>
+        </div>
+
+        <div class="card">
+            <h3>Alberto Mansilla – Portavoz del curso</h3>
+            <p>La voz oficial del grupo. Se asegura de que nadie se quede sin información.</p>
+        </div>
+
+        <div class="card">
+            <h3>Miguel Rivera – Responsable de festejos</h3>
+            <p>El arquitecto de la parte divertida. Si hay fiesta, Miguel está detrás.</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="section">
+        <h2>Galería y recuerdos</h2>
+        <p>Después del evento podrás subir fotos, vídeos e imágenes para crear un álbum colectivo.</p>
+
+        <input type="file" multiple class="upload">
+        <p class="nota">(*Aquí podrás implementar más adelante un sistema real de subida de archivos.)</p>
+    </section>
+
+    <!-- CIERRE -->
+    <footer class="footer">
+        <h2>Cerramos etapa. Abrimos fiesta.</h2>
+        <p>El 9 de junio de 2026 será una noche para recordar. Ven, participa, celebra y deja huella.</p>
+    </footer>
+
+    <!-- SCRIPT CUENTA ATRÁS -->
+    <script>
+        const targetDate = new Date("June 9, 2026 18:30:00").getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            document.getElementById("minutes").innerText = Math.floor((diff / (1000 * 60)) % 60);
+            document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
+        }, 1000);
+    </script>
+
+</body>
+</html>
